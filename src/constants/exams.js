@@ -13,6 +13,7 @@ const exams = [
   "TKT",
   "Linguaskill",
   "IELTS Mock",
+  "Arzonlashtirilgan Xalqaro CEFR imtihoni",
 ];
 
 const examInfoLink = [
@@ -30,6 +31,7 @@ const examInfoLink = [
   "https://www.cambridgeenglish.org/teaching-english/teaching-qualifications/tkt/",
   "https://www.cambridgeenglish.org/exams-and-tests/linguaskill/",
   "https://www.cambridgeenglish.org/exams-and-tests/ielts/",
+  "https://www.cambridgeenglish.org/exams-and-tests/linguaskill/",
 ];
 
 export const ExamNames = exams.map((e, i) => {
