@@ -1,0 +1,15 @@
+.searcUser {
+  border: 1px solid #62cdff;
+  padding: 10px 20px;
+  margin-top: 8px;
+  width: 100%;
+  outline: none;
+  color: darkblue;
+}
+.searcUser:focus {
+  outline: 3px solid #97deff;
+}
+
+.searcUser::placeholder {
+  color: #62cdff;
+}
