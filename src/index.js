@@ -28,7 +28,7 @@ import Arrangement from "./pages/arrangement/Arrangement";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h1>Hello Parviz Qalesiz</h1>,
+    element: <Landing />,
   },
 
   {
