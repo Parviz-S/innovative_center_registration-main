@@ -437,7 +437,7 @@ const TermsAndConditions = () => {
         <br /> Account name: "Innovatsion Maskan" INN: 207 254 630 <br />
         <br /> Bank name: NBU Samarkand regional branch, <br />
         <br /> Account Number: 2021 2000 9007 8024 1001 <br />
-        <br /> MFO: 00278 <br />
+        <br /> MFO: 00450 <br />
         <br /> Annex 1 to the contract of offer for qualification testing
         English Language Assessment in English Cambridge English Language
         Assessment Test Guidelines
