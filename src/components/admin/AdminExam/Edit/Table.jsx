@@ -64,7 +64,7 @@ function AdminTable({ head = [], body = [] }) {
     axios
       .post(BASE_URL + "/api/delete_user", { user_id })
       .then((response) => {
-        const { status } = response.data;
+        // const { status } = response.data;
         window.location.reload();
       })
       .catch((error) => {

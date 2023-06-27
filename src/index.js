@@ -39,7 +39,6 @@ const router = createBrowserRouter([
     path: "/admin",
     element: (
       <>
-        {/* <Navbar /> */}
         <AdminLogin />
       </>
     ),
@@ -48,7 +47,6 @@ const router = createBrowserRouter([
     path: "/admin/candidates",
     element: (
       <>
-        {/* <Navbar /> */}
         <Admin />
       </>
     ),

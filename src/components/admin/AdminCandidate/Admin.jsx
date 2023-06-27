@@ -7,6 +7,8 @@ const Admin = () => {
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchExamQuery, setSearchExamQuery] = useState("");
+  const [searchDateQuery, setSearchDateQuery] = useState("");
 
   const fetchUsers = async () => {
     axios.get(BASE_URL + "/api/allUsers").then((res) => {
@@ -25,7 +27,7 @@ const Admin = () => {
     <div>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-sm-12 col-md-6 col-lg-6">
+          <div className="col-sm-12 col-md-4 col-lg-4">
             <input
               type="search"
               placeholder="Search Users"
@@ -34,8 +36,31 @@ const Admin = () => {
               onChange={(event) => {
                 setSearchQuery(event.target.value);
                 setFilteredUsers(
+                  users.filter(
+                    (user) =>
+                      user.first_name
+                        .toLowerCase()
+                        .includes(event.target.value.toLowerCase()) ||
+                      user.last_name
+                        .toLowerCase()
+                        .includes(event.target.value.toLowerCase())
+                  )
+                );
+                console.log({ filteredUsers });
+              }}
+            />
+          </div>
+          <div className="col-sm-12 col-md-4 col-lg-4">
+            <input
+              type="search"
+              placeholder="Search by Exam type"
+              value={searchExamQuery}
+              className="searcUser"
+              onChange={(event) => {
+                setSearchExamQuery(event.target.value);
+                setFilteredUsers(
                   users.filter((user) =>
-                    user.first_name
+                    user.exam_type
                       .toLowerCase()
                       .includes(event.target.value.toLowerCase())
                   )
@@ -44,17 +69,17 @@ const Admin = () => {
               }}
             />
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6">
+          <div className="col-sm-12 col-md-4 col-lg-4">
             <input
               type="search"
-              placeholder="Search by Exam type"
-              value={searchQuery}
+              placeholder="Search by Exam date"
+              value={searchDateQuery}
               className="searcUser"
               onChange={(event) => {
-                setSearchQuery(event.target.value);
+                setSearchDateQuery(event.target.value);
                 setFilteredUsers(
                   users.filter((user) =>
-                    user.exam_type
+                    user.exam_date
                       .toLowerCase()
                       .includes(event.target.value.toLowerCase())
                   )
